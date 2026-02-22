@@ -17,6 +17,17 @@ export interface NodeData{
     error?: string;
 }
 
-export interface workFlowNode extends Node{
+export interface WorkflowNode extends Node{
     data : NodeData;
+}
+
+export interface WorkflowEdge extends Edge {
+
+}
+
+export interface WorkflowState{
+    nodes : WorkflowNode[];
+    edges : WorkflowEdge[];
+    addNode : (node : WorkflowNode)=> void;
+    updateNode : (id : string , data : Partial<NodeData>)=> void;
 }
