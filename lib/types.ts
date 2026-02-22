@@ -30,4 +30,11 @@ export interface WorkflowState{
     edges : WorkflowEdge[];
     addNode : (node : WorkflowNode)=> void;
     updateNode : (id : string , data : Partial<NodeData>)=> void;
+    deleteNode : (id : string) => void;
+    addEdge : (edge : WorkflowEdge)=> void;
+    deleteEdge : (id : string) => void;
+    setEdges : (edges : WorkflowEdge[]) => void;
+    setNodes : (nodes : WorkflowNode[]) => void;
+    clearWorkflow : ()=> void;
+
 }
